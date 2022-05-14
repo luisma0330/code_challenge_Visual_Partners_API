@@ -8,8 +8,12 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./node_modules/.bin/jest"
   },
   "author": "luisma0330",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "jest": "^28.1.0"
+  }
 }
