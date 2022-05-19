@@ -5,4 +5,8 @@ describe("Tests para StudentController", () => {
         const students = StudentController.getStudents();
         expect(students.length).toBe(51);
     });
+    test("2) Devolver una lista con los email de los estudiantes que tengan certificacion", () => {
+        const emails = StudentController.getEmailWithCertification();
+        expect(emails.length).toBe(29);
+    });
 });

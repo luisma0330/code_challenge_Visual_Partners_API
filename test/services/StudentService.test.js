@@ -30,4 +30,9 @@ describe("Test para StudentService", () => {
         ];
         expect(students).toMatchObject(expected);
     });
+    test("2) Devolver una lista con los emails de los estudiantes que tengan certificacion", () => {
+        const students = [{email: "luisma0330@gmail.com", haveCertification: true}, {email: "luisma0321@gmail.com", haveCertification: false}];
+        const emails = StudentService.getEmailWithCertification(students);
+        expect(emails.length).toBe(1);
+    });
 });
