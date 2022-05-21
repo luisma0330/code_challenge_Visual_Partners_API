@@ -9,4 +9,8 @@ describe("Tests para StudentController", () => {
         const emails = StudentController.getEmailWithCertification();
         expect(emails.length).toBe(29);
     });
+    test("3) Devolver una lista con los estudiantes con 500 o mas creditos", () => {
+        const accredited = StudentController.getStudentsAccredit();
+        expect(accredited.length).toBe(27);
+    });
 });
