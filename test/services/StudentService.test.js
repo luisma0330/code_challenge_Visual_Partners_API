@@ -35,4 +35,9 @@ describe("Test para StudentService", () => {
         const emails = StudentService.getEmailWithCertification(students);
         expect(emails.length).toBe(1);
     });
+    test("3) Devolver una lista con los estudiantes con más de 500 creditos", () => {
+        const students = [{name: "luis", credits: 501}, {name: "manuel", credits: 499}];
+        const accredited = StudentService.getStudentsAccredit(students);
+        expect(accredited.length).toBe(1);
+    });
 });
